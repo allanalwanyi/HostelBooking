@@ -1,0 +1,148 @@
+.<!DOCTYPE html>
+<html>
+<head>
+	<title>CONTACT US </title>
+	<style type="text/css">
+		body
+		{
+			background-image: url(images/back.jpg);
+			filter: blur(px);
+			height: 100%;
+			-webkit-filter:blur(px);
+			/*background-repeat: no-repeat;*/
+			background-size: cover;
+			background-position: center;
+			padding: 5px;
+		}
+		
+		h1	
+		{
+			text-align: center;
+		}
+		form
+		{
+			padding: 2%;
+			margin-left:30%;
+			margin-right:30%;
+			height: 100%;
+			margin-top: 10%;
+			margin-bottom: 10%;
+			background-color: #00ff80;  
+		}
+		ul 
+		{
+			    list-style-type: none;
+			    margin: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    background-color:	#003333;
+		}
+
+		li 
+		{
+		    float: left;
+		    border-right: 1px solid #bbb;
+		}
+
+		li a 
+		{
+		    display: inline-block;
+		    color: white;
+		    text-align: center;
+		    padding: 14px 16px;
+		    text-decoration: none;
+		}
+
+		li a:hover 
+		{
+		    background-color: #ff1a75;
+		}
+		.c
+		{
+			background-color: #cc0000;
+			padding: 5%;
+		}
+		h2
+		{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<form>
+		<h1>KENYA INDUSTRIAL TRAINING INSTITUTE</h1>
+		<div>
+		<ul>
+  		<li><a href="index.php">Home</a></li>
+  		<li style="float:right"><a class="active" href="signup.php">Sign Up</a></li>
+		</ul>
+		</div>
+		<br>
+		<br>
+		<div class="c">
+			<u><h2>CONTACT US</h2></u>
+			<br>
+			Kenya Industrial Training Institute Solai Road <br>
+			<br>
+
+			P.O. Box 280-20100 Nakuru - Kenya <br>
+			<br>
+
+			Tel +254 51 2216755/51 2216291/51 <br>
+			<br>
+
+			 738233765/774944615 <br>
+			 <br>
+
+			Email: directorkiti@yahoo.com <br>
+			<br>
+		</div>
+
+	</form>
+	<script>
+    /* Google map
+     ------------------------------------------------*/
+    var map = '';
+    var center;
+
+    function initialize() {
+        var mapOptions = {
+            zoom: 16,
+            center: new google.maps.LatLng(13.758468, 100.567481),
+            scrollwheel: false
+        };
+
+        map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+
+        google.maps.event.addDomListener(map, 'idle', function () {
+            calculateCenter();
+        });
+
+        google.maps.event.addDomListener(window, 'resize', function () {
+            map.setCenter(center);
+        });
+    } // initialize
+
+    function calculateCenter() {
+        center = map.getCenter();
+    }
+
+    function loadGoogleMap() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' + 'callback=initialize';
+        document.body.appendChild(script);
+    }
+
+    // DOM is ready.
+    $(document).ready(function () {
+        loadGoogleMap();
+    });
+</script>
+	<footer class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 footer">
+                <p class="copyright">Copyright © 2020 KITI</p>
+            </div>
+        </footer> 
+</body>
+</html>
